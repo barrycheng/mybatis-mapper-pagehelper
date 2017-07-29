@@ -8,14 +8,6 @@ pipeline {
         gitlab(triggerOnPush: true, triggerOnMergeRequest: true, branchFilterType: 'All')
     }
     stages {
-        stage('Initialize') {
-            steps {
-                script {
-                    def pom = readMavenPom file: 'pom.xml'
-                }
-                echo "Initialize success!"
-            }
-        }
         stage('Test') {
             steps {
                 configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
