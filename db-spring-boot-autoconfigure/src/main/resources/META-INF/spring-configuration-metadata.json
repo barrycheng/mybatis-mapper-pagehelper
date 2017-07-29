@@ -46,6 +46,57 @@
       "name": "mapper.style",
       "description": "实体和表转换时的规则，默认驼峰转下划线，可选值为normal用实体名和字段名;camelhump是默认值，驼峰转下划线;uppercase转换为大写;lowercase转换为小写.",
       "type": "java.lang.String"
+    },
+    {
+      "name": "pagehelper.properties",
+      "description": "参数实体.",
+      "type": "java.util.Map<String, String>"
+    },
+    {
+      "name": "pagehelper.auto-dialect",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "pagehelper.auto-runtime-dialect",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "pagehelper.close-conn",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "pagehelper.dialect",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "pagehelper.helper-dialect",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "pagehelper.offset-as-page-num",
+      "description": "分页偏移量转换为页码.",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "pagehelper.page-size-zero",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "pagehelper.params",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "pagehelper.reasonable",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "pagehelper.row-bounds-with-count",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "pagehelper.support-methods-arguments",
+      "description": "启用 Mapper 接口分页参数",
+      "type": "java.lang.String"
     }
   ],
   "hints": [
