@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+ml.jjandxa.db.DataBaseAutoConfigure,\
+ml.jjandxa.db.utils.MapperGenerator

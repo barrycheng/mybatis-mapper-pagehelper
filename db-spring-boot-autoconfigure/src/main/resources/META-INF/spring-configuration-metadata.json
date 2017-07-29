@@ -1,0 +1,132 @@
+{
+  "properties": [
+    {
+      "name": "mapper.uuid",
+      "description": "生成 uuid 的方法.",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "mapper.before",
+      "description": "selectKey 的 order 属性.",
+      "type": "java.lang.Boolean",
+      "defaultValue": false
+    },
+    {
+      "name": "mapper.catalog",
+      "description": "数据库的 catalog.",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "mapper.schema",
+      "description": "数据库的 schema.",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "mapper.not-empty",
+      "description": "insert和update中，是否判断字符串类型!=''，少数方法会用到.",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "mapper.enable-method-annotation",
+      "description": "可以控制是否支持方法上的JPA注解，默认false.",
+      "type": "java.lang.Boolean",
+      "defaultValue": false
+    },
+    {
+      "name": "mapper.identity",
+      "description": "主键生成策略.",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "mapper.seq-format",
+      "description": "序列的获取规则,使用{num}格式化参数，默认值为{0}.nextval，针对Oracle，可选参数一共4个，对应0,1,2,3分别为SequenceName，ColumnName, PropertyName，TableName.",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "mapper.style",
+      "description": "实体和表转换时的规则，默认驼峰转下划线，可选值为normal用实体名和字段名;camelhump是默认值，驼峰转下划线;uppercase转换为大写;lowercase转换为小写.",
+      "type": "java.lang.String"
+    }
+  ],
+  "hints": [
+    {
+      "name": "mapper.identity",
+      "type": "java.lang.String",
+      "values": [
+        {
+          "value": "DB2"
+        },
+        {
+          "value": "MYSQL"
+        },
+        {
+          "value": "SQLSERVER"
+        },
+        {
+          "value": "CLOUDSCAPE"
+        },
+        {
+          "value": "DERBY"
+        },
+        {
+          "value": "HSQLDB"
+        },
+        {
+          "value": "SYBASE"
+        },
+        {
+          "value": "DB2_MF"
+        },
+        {
+          "value": "INFORMIX"
+        },
+        {
+          "value": "JDBC"
+        }
+      ],
+      "providers": [
+        {
+          "name": "any"
+        }
+      ]
+    },
+    {
+      "name": "mapper.seq-format",
+      "description": "序列的获取规则,使用{num}格式化参数，默认值为{0}.nextval，针对Oracle，可选参数一共4个，对应0,1,2,3分别为SequenceName，ColumnName, PropertyName，TableName.",
+      "type": "java.lang.String",
+      "values": [
+        {
+          "value": "0"
+        },
+        {
+          "value": "1"
+        },
+        {
+          "value": "2"
+        },
+        {
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "name": "mapper.style",
+      "description": "实体和表转换时的规则，默认驼峰转下划线，可选值为normal用实体名和字段名;camelhump是默认值，驼峰转下划线;uppercase转换为大写;lowercase转换为小写.",
+      "type": "java.lang.String",
+      "values": [
+        {
+          "value": "0"
+        },
+        {
+          "value": "1"
+        },
+        {
+          "value": "2"
+        },
+        {
+          "value": "3"
+        }
+      ]
+    }
+  ]
+}
