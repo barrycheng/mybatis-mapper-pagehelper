@@ -7,6 +7,9 @@ pipeline {
     triggers {
         gitlab(triggerOnPush: true, triggerOnMergeRequest: true, branchFilterType: 'All')
     }
+    tools {
+        maven 'Maven'
+    }
     stages {
         stage('Test') {
             steps {
