@@ -16,7 +16,7 @@ class DbSpringBootExampleApplicationTests {
 
 	@Test
 	fun genMapper() {
-		MapperGenerator.genMapper("/generatorConfig.xml")
+		// MapperGenerator.genMapper("/generatorConfig.xml")
 	}
 
 }
