@@ -8,16 +8,26 @@ pipeline {
         gitlab(triggerOnPush: true, triggerOnMergeRequest: true, branchFilterType: 'All')
     }
     stages {
-        stage('Test') {
+        stage('Initialize') {
             steps {
                 script {
-                    sh 'mvn test'
+                    def pom = readMavenPom file: 'pom.xml'
+                }
+                echo "Initialize success!"
+            }
+        }
+        stage('Test') {
+            steps {
+                configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
+                    sh 'mvn -s $MAVEN_SETTINGS test'
                 }
             }
         }
         stage('Deploy') {
             steps {
-                sh 'mvn deploy -Dmaven.test.skip=true'
+                configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
+                    sh 'mvn -s $MAVEN_SETTINGS deploy -Dmaven.test.skip=true'
+                }
             }
         }
     }
