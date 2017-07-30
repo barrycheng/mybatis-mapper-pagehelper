@@ -8,11 +8,11 @@
 # 如何使用
 1. 添加依赖
 ```
-    <dependency>
-        <groupId>ml.jjandxa</groupId>
-        <artifactId>db-spring-boot-starter</artifactId>
-        <version>0.0.1</version>
-    </dependency>
+<dependency>
+    <groupId>ml.jjandxa</groupId>
+    <artifactId>db-spring-boot-starter</artifactId>
+    <version>0.0.1</version>
+</dependency>
 ```
 2. 添加数据源配置、mybatis 配置、分页配置
 ```
