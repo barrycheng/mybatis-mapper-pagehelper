@@ -56,7 +56,8 @@ mapper:
   before: true
 ```
 # 生成 Mapper 接口、Mapper XML、Model
-调用 `MapperGenerator.genMapper("/generatorConfig.xml")` 方法，传入 generatorConfig 配置文件路径，可参考 example 项目的配置
+调用 `MapperGenerator.genMapper("/generatorConfig.xml")` 方法，传入 generatorConfig 配置文件路径，可参考 example 项目的配置，
+Mapper 接口需要手动加上 @Mapper 注解才能被 Mybatis 扫描到
 # IDE 支持
 ![](db-spring-boot-example/src/main/resources/1.png)
 # 替换数据源
