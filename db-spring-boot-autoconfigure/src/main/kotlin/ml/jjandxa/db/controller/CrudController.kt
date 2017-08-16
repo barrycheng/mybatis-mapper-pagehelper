@@ -11,7 +11,7 @@ open abstract class CrudController<T, in R> {
     /**
      * 表格查询
      */
-    abstract fun queryRecord(query: R, pageNum: Int, pageSize:Int): Map<String, Any>
+    abstract fun queryRecord(query: R): Map<String, Any>
 
     /**
      * 添加记录
