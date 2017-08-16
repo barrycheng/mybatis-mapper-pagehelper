@@ -1,6 +1,7 @@
 package ml.jjandxa.db.controller
 
 import com.github.pagehelper.PageInfo
+import com.ricelink.cloud.base.pojo.ResponseData
 
 /**
  * 单表维护 Controller 模板
@@ -15,17 +16,17 @@ open abstract class CrudController<T, in R> {
     /**
      * 添加记录
      */
-    abstract fun addRecord(record: T)
+    abstract fun addRecord(record: T): ResponseData<T>
 
     /**
      * 批量删除记录
      */
-    abstract fun deleteRecord(record: List<T>)
+    abstract fun deleteRecord(record: List<T>): ResponseData<T>
 
     /**
      * 更新记录
      */
-    abstract fun updateRecord(record: T)
+    abstract fun updateRecord(record: T): ResponseData<T>
 
     /**
      * 返回表格数据

@@ -19,6 +19,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.ricelink.cloud</groupId>
+            <artifactId>rl-base-common</artifactId>
+            <version>0.0.1</version>
+        </dependency>
         <!-- 数据库连接池 -->
         <dependency>
             <groupId>com.alibaba</groupId>
