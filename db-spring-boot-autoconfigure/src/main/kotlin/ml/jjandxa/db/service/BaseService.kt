@@ -3,6 +3,7 @@ package ml.jjandxa.db.service;
 import com.github.pagehelper.PageHelper
 import com.github.pagehelper.PageInfo
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional
 import tk.mybatis.mapper.common.Mapper
 import tk.mybatis.mapper.entity.Example
 
@@ -91,11 +92,23 @@ open class BaseService<T> {
         return mapper.delete(record)
     }
 
+
     /**
      * 根据主键删除
      */
     fun deleteByPrimaryKey(key: Any): Int {
         return mapper.deleteByPrimaryKey(key)
+    }
+
+    /**
+     * 批量删除
+     */
+    @Throws(RuntimeException::class)
+    @Transactional
+    open fun deleteBatchByPrimaryKey(record: List<T>) {
+        record.forEach {
+            mapper.delete(it)
+        }
     }
 
     /**
