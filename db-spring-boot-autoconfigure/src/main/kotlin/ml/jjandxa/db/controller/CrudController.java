@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * 单表维护 Controller 模板
  */
-abstract class CrudController<T, R> {
+abstract public class CrudController<T, R> {
 
     /**
      * 表格查询
