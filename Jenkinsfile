@@ -21,6 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
+                    sh 'mvn -s $MAVEN_SETTINGS install -Dmaven.test.skip=true'
                     sh 'mvn -s $MAVEN_SETTINGS deploy -Dmaven.test.skip=true'
                 }
             }
