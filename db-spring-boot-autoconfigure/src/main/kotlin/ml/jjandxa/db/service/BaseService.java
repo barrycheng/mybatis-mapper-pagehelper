@@ -103,7 +103,7 @@ public class BaseService<T> {
      * 批量删除
      */
     @Transactional
-    public void deleteBatchByPrimaryKey(List<T> record) {
+    public void deleteBatchByPrimaryKey(List<T> record) throws RuntimeException {
         record.forEach(it -> mapper.delete(it));
     }
 
