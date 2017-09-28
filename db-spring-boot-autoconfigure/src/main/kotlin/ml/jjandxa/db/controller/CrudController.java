@@ -2,10 +2,9 @@ package ml.jjandxa.db.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.ricelink.cloud.base.pojo.ResponseData;
+import com.ricelink.cloud.base.pojo.TableData;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * 单表维护 Controller 模板
@@ -15,7 +14,7 @@ abstract public class CrudController<T, R> {
     /**
      * 表格查询
      */
-    abstract protected Map<String, Object> queryRecord(R query);
+    abstract protected ResponseData<TableData<T>> queryRecord(R query);
 
     /**
      * 添加记录
@@ -35,10 +34,10 @@ abstract public class CrudController<T, R> {
     /**
      * 返回表格数据
      */
-    protected Map<String, Object> getTableData(PageInfo<T> pageInfo)  {
-        Map<String, Object> result = new HashMap<>();
-        result.put("data", pageInfo.getList());
-        result.put("total", pageInfo.getTotal());
-        return result;
+    protected ResponseData<TableData<T>> getTableData(Integer code, String message, PageInfo<T> pageInfo)  {
+        TableData<T> data = new TableData<>();
+        data.setTotal(pageInfo.getTotal());
+        data.setData(pageInfo.getList());
+        return new ResponseData<>(code, message, data);
     }
 }

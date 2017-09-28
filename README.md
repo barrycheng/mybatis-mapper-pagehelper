@@ -11,7 +11,7 @@
 <dependency>
     <groupId>ml.jjandxa</groupId>
     <artifactId>db-spring-boot-starter</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
 </dependency>
 ```
 2. 添加数据源配置、mybatis 配置、分页配置
